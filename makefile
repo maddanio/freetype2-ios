@@ -1,7 +1,7 @@
 all: libFreetype2.a
 
-libFreetype2.a: libFreetype2-arm.a libFreetype2-sim.a
-	lipo -output libFreetype2.a -create libFreetype2-arm.a libFreetype2-sim.a
+libFreetype2.a: libFreetype2-arm.a
+	lipo -output libFreetype2.a -create libFreetype2-arm.a
 
 libFreetype2-arm.a:
 	xcodebuild -configuration Release -sdk iphoneos -alltargets clean
